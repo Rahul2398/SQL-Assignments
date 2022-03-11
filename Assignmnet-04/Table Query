@@ -1,0 +1,19 @@
+CREATE TABLE Worker (WORKER_ID INT NOT NULL PRIMARY KEY identity(1,1),
+FIRST_NAME CHAR(30),
+LAST_NAME CHAR(25),
+SALARY INT,
+JOINING_DATE DATE,
+DEPARTMENT CHAR(25)
+ );
+SET IDENTITY_INSERT Worker ON;
+INSERT INTO Worker 
+(WORKER_ID, FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT)
+VALUES
+((001), 'Mohan', 'Arora', 200000, '2020-02-02', 'HR'),
+(002, 'Nitin', 'Verma', 440000, '2020-06-04', 'Admin'),
+(003, 'Vikash', 'Singhal', 350000, '2020-02-04', 'HR'),
+(004, 'Amitabh', 'Singh', 550000, '2020-02-20', 'Admin'),
+(005, 'Vipin', 'Bhati', 560000, '2020-06-22', 'Admin'),
+(006, 'Vivan', 'Diwan', 230000, '2020-06-21', 'Account'),
+(007, 'Satyam', 'Kumar', 72000, '2020-01-27', 'Account'),
+(008, 'Geeta', 'Chauhan', 97000, '2020-04-22', 'Admin');
