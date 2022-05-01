@@ -1,0 +1,13 @@
+Q-1. Write an SQL query to print details of the Workers who have joined in Feb’2014.
+SELECT * FROM Workers where JOINING_DATE like '2014-02%'
+Q-2. Write an SQL query to fetch duplicate records having matching data in some fields of a table.
+Ans-2. SELECT FIRST_NAME, COUNT(*) FROM Workers GROUP BY DEPARTMENT, HAVING COUNT(*) > 1;
+Q-3. How to remove duplicate rows from Employees table.
+SELECT FullName, ManagerId, DateOfJoining, City, COUNT(*)
+FROM EmployeeDetails
+GROUP BY FullName, ManagerId, DateOfJoining, City
+HAVING COUNT(*) > 1;
+select  count(FIRST_NAME) ,FIRST_NAME
+from worker
+group by DEPARTMENT
+having COUNT( FIRST_NAME) > 1
